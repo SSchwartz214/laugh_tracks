@@ -7,7 +7,7 @@ RSpec.describe "a visitor visits comedian page" do
 
       visit '/comedians'
 
-      within("#comedian-list")
+      within("#specials-list")
         expect(page).to have_content("Viscious Circle")
     end
   end
