@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>comedians</title>
+  </head>
+
+  <body>
+    <% @comedians.each do |comic| %>
+      <ul>
+        <li>Name: <%= comic.name %> </li>
+        <li>Age: <%= comic.age %> </li>
+      </ul>
+      <%comic.specials.each do |special|%>
+      <p>Special: <%=special.name %></p>
+      <% end %>
+      <p>Total: <%=comic.specials_count%></p>
+    <% end %>
+    <p>Average age of all comedians: <%= @average_age %></p>
+  </body>
+</html>
